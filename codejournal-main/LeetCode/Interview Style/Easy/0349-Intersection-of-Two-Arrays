@@ -1,0 +1,18 @@
+# LeetCode 349 — Intersection of Two Arrays
+# Link: https://leetcode.com/problems/intersection-of-two-arrays/
+#
+# Approach:
+# 1. Convert nums1 and nums2 to sets to remove duplicates.
+# 2. Use set intersection (&) to get the common elements.
+# 3. Convert the result back into a list and return it.
+#
+# Time Complexity: O(n + m) — creating two sets and intersecting them.
+# Space Complexity: O(n + m) — storing both sets in memory.
+#
+# Reflection:
+# - This was straightforward once I remembered that set operations are O(1) on average.
+# - Useful pattern: whenever I need unique common elements, think of sets first.
+
+class Solution(object):
+    def intersection(self, nums1, nums2):
+        return list(set(nums1) & set(nums2))
